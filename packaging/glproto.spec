@@ -25,6 +25,7 @@ make %{?jobs:-j%jobs}
 %make_install
 
 %files
+%license COPYING
 %defattr(-,root,root,-)
 %{_datadir}/pkgconfig/glproto.pc
 %{_includedir}/GL/glxmd.h
