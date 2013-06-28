@@ -6,6 +6,7 @@ Group:      Development/System
 License:    MIT
 URL:        http://www.x.org
 Source0:    http://xorg.freedesktop.org/releases/individual/proto/glproto-%{version}.tar.bz2
+Source1001: 	glproto.manifest
 
 
 %description
@@ -14,6 +15,7 @@ glproto is the protocol for the client to send 3D rendering commands to the X se
 
 %prep
 %setup -q 
+cp %{SOURCE1001} .
 
 %build
 
@@ -25,6 +27,7 @@ make %{?jobs:-j%jobs}
 %make_install
 
 %files
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root,-)
 %{_datadir}/pkgconfig/glproto.pc
