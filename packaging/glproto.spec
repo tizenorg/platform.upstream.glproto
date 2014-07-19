@@ -1,3 +1,5 @@
+%bcond_with x
+
 Name:       glproto
 Summary:    X.Org X11 Protocol glproto
 Version:    1.4.16
@@ -8,6 +10,9 @@ URL:        http://www.x.org
 Source0:    http://xorg.freedesktop.org/releases/individual/proto/glproto-%{version}.tar.bz2
 Source1001: 	glproto.manifest
 
+%if !%{with x}
+ExclusiveArch:
+%endif
 
 %description
 glproto is the protocol for the client to send 3D rendering commands to the X server.
