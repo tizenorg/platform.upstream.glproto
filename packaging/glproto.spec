@@ -2,7 +2,7 @@
 
 Name:       glproto
 Summary:    X.Org X11 Protocol glproto
-Version:    1.4.16
+Version:    1.4.17
 Release:    1 
 Group:      Development/System
 License:    MIT
