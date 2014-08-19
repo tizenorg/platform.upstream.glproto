@@ -24,7 +24,7 @@ cp %{SOURCE1001} .
 
 %build
 
-%configure --libdir=%{_datadir}
+%autogen --libdir=%{_datadir}
 
 make %{?jobs:-j%jobs}
 
