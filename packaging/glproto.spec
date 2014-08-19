@@ -10,6 +10,8 @@ URL:        http://www.x.org
 Source0:    http://xorg.freedesktop.org/releases/individual/proto/glproto-%{version}.tar.bz2
 Source1001: 	glproto.manifest
 
+BuildRequires: pkgconfig(xorg-macros)
+
 %if !%{with x}
 ExclusiveArch:
 %endif
